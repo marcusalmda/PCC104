@@ -24,7 +24,6 @@ void DCMinMax(std::vector<int>& v, int l, int r, pair<int, int>& minmax) {
         pair<int, int> minmax2(0,0);
         DCMinMax(v, l, std::floor((r + l) / 2), minmax);
         DCMinMax(v, std::floor((r + l) / 2) + 1, r, minmax2);
-
         minmax.first = (minmax.first < minmax2.first) ? minmax.first : minmax2.first;
         minmax.second = (minmax.second > minmax2.second) ? minmax.second : minmax2.second;
     }
